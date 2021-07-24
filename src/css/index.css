@@ -319,7 +319,6 @@ header {
     color: var(--main-disable-color);
 }
 
-
 .signature{
     width: 37%;
     padding-left: 8px;
@@ -336,6 +335,11 @@ header {
     padding: 16px;
     border-bottom: 1px solid var(--body-bg-color);
 
+}
+
+.card {
+    position: sticky;
+    top: 1.5em;
 }
 
 
