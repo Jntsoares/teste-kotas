@@ -13,6 +13,7 @@
     --main-disable-color: #c4c4c4;
     --button-primary-color: #01B1EC;
     --secondary-text:#616161;
+    --success-color: #26B36A;
     --dark-grey: #141728;
     --card-radius: 8px;
     --quicksand-font: 'Quicksand', sans-serif;
@@ -63,7 +64,7 @@ header {
     margin-left: 38px;
     border-radius: 50px;
     border: 1px solid var(--main-border-color);
-    background: url(/src/assets/Ellipse.svg) no-repeat scroll 12px 8px;
+    background: url("../assets/Ellipse.svg") no-repeat scroll 12px 8px;
     padding-left: 40px;
 }
 
@@ -78,8 +79,9 @@ header {
     color: var(--main-black-color);
 }
 
-.actions span {
+.actions h4 {
     padding-left: 10px;
+    display: inline;
 }
 
 .actions .notifications{
@@ -186,6 +188,8 @@ header {
 
 .group{
     padding: 16px 17px 18px;
+    
+    cursor: pointer;
 }
 
 .group h3{
@@ -195,7 +199,6 @@ header {
 }
 
 .group img{
-    cursor: pointer;
     float: right;
 }
 
@@ -228,6 +231,7 @@ header {
 
 .accordion-item{
     padding: 16px;
+    cursor: pointer;
 }
 
 .accordion-item:not(:last-child){
@@ -337,7 +341,7 @@ header {
 
 }
 
-.card {
+.sticky {
     position: sticky;
     top: 1.5em;
 }
@@ -381,13 +385,182 @@ header {
     cursor: pointer;
 }
 
+.qtd-kotas-actions button:hover {
+    background-color: #00a6de;
+}
+
+.total .tax{
+    padding: 18px 16px 16px;
+    border-bottom: none !important;
+}
+
+.tax h3{
+    color: var(--main-black-color);
+    font-weight: 700;
+    
+}
+
+.total-info{
+    justify-content: space-around;
+    margin: 0 20px;
+    border-bottom: none !important;
+    font-size: 10px;
+    font-family: var(--quicksand-font);
+    color: var(--dark-grey);
+    padding-bottom: 7px !important;
+}
+
+.last-month{
+    color:var(--success-color);
+}
+
+.progress{
+    /* background: url("/src/assets/Progresso-1.svg") center no-repeat; */
+    background: url("../assets/Progresso-1.svg") center no-repeat;
+    background-size: contain;
+    height: 22px;
+    margin: 0 42px;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+.total-info.label{
+    padding: 7px;
+}
+
+.enjoy{
+    padding: 16px 16px 11px;
+}
+
+.btn-enjoy{
+    background-color: var(--button-primary-color);
+    font-family: 'Mulish', sans-serif;;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 16px;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-enjoy:hover {
+    background-color: #00a6de;
+}
+
+.btn-disabled{
+    background-color: var(--secondary-text) !important;
+    cursor: inherit !important;
+}
 
 footer{
     height: 168px;
 }
 
-@media (min-width: 1200px){
+@media only screen and (min-width: 1200px){
     .container {
         width: 875px;
     }
+}
+@media only screen and (min-width: 1024px){
+    .signature-mobile, .info-mobile{
+        display: none;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .container.flex{
+        display: block;
+        padding: 0;
+    }
+
+    .main-card{
+        border-radius: 0;
+    }
+   
+    .content{
+        width: 100% !important;
+        padding-right: 0;
+    }
+
+    .signature{
+        width: 100% !important;
+        padding-left: 0;
+    }
+
+    .card{
+        position: fixed ;
+        bottom: 0;
+        width: 100%;
+    
+    }
+
+    header, .qtd-kotas, .caucao, .tax, 
+    .total-info, .progress, .label, .signature-price{
+        display: none !important;
+    }
+
+    .mobile{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signature-mobile{
+        padding: 0 !important;
+        border-bottom: 0px !important;
+    }
+
+    .mobile button{
+        width: 37%;
+    }
+
+    .mobile h5{
+        font-size: 14px;
+        color: var(--main-black-color);
+        font-weight: bold;
+    }
+
+    .month{
+        font-size: 10px;
+    }
+
+    .view-price{
+        padding-top: 15px;
+        font-size: 12px;
+        color: #0CD4AD;
+    }
+
+    .product{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .product p{
+        line-height: 1.6em;
+    }
+
+    .product h2{
+        padding-top: 5px;
+    }
+
+    .invite p{
+        margin-top: -5px;
+    }
+
+    .info-mobile{
+        position:absolute;
+        top: 20px;
+        right: 20px;
+        padding: 2px 8px 2px 8px;
+        border-radius: 50%;
+        border: none;
+        font-weight: 700;
+        color:#ffffff;
+        background-color: var(--main-border-color);
+    }
+
+
 }
